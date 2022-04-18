@@ -12,4 +12,4 @@ Formulaire de contact.
 <pre>composer installer</pre>
 
 -Configurer Mailer dans le .ENV
-<pre>MAILER_DSN=smtp://USER:PASSWORD@smtp-mail.outlook.com:587<pre>
+<pre>MAILER_DSN=smtp://USER:PASSWORD@smtp-mail.outlook.com:587</pre>
