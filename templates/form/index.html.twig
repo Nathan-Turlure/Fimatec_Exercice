@@ -5,5 +5,93 @@
 {% block body %}
 
 
+<div class=" row container-fluid ">
 
+    <div class="col img">
+        <image src="https://www.efficy.com/wp-content/uploads/2019/03/online-survey.png"></image>
+    </div>
+
+    <div class="col justify-content-center ">
+
+        <div class="text-primary">
+            <h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold ">CONTACT</h1>
+            {{ form_start(form) }}
+
+            <br>
+            {{ form_label(form.Nom, null, {
+                
+                'label_attr' : {
+                    'class' : 'fw-bold  test',
+                    
+                    }}
+
+            )}}
+
+            {{ form_widget(form.Nom,  {
+                'attr': {
+                    
+                    'class' : 'form-control ',
+                    
+                    }}
+            )}}
+
+            <br>
+            {{ form_label(form.Prenom, null, {
+                
+                'label_attr' : {
+                    'class' : 'fw-bold',
+                    }}
+
+            )}}
+
+            {{ form_widget(form.Prenom,  {
+                    'attr': {
+                        'class' : 'form-control ', 
+                        }}
+            )}}
+            <br>
+            {{ form_label(form.Adresse, null, {
+                
+                'label_attr' : {
+                    'class' : 'fw-bold',
+                    }}
+
+            )}}
+
+            {{ form_widget(form.Adresse,  {
+                    'attr': {
+                        'class' : 'form-control',
+                        }}
+            )}}
+            <br>
+            {{ form_label(form.Date_Naissance, null, {
+                
+                'label_attr' : {
+                    'class' : 'fw-bold',
+                    }}
+
+            )}}
+
+            {{ form_widget(form.Date_Naissance,  {
+                    'attr': {
+                        'class' : 'form-control',
+                        }}
+            )}}
+            <br>
+
+            <button type="submit" class="btn btn-primary">Suivant</button>
+
+            {{ form_rest(form) }}
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+</div>
+
+<style>
+    img {
+        padding-top: 125px;
+    }
+</style>
 {% endblock %}
