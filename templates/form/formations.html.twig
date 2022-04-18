@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+
+{% block body %}
+
+
+<div class=" row container-fluid">
+
+    <div class="col img">
+        <image src="https://www.efficy.com/wp-content/uploads/2019/03/online-survey.png"></image>
+    </div>
+
+    <div class="col justify-content-center">
+
+        <div class="text-primary fw-bold mb-3">
+            <h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold">CONTACT</h1>
+            <br>
+            <fieldset disabled="">
+                <label for="Nom">Nom</label>
+                <input class="form-control" type="Text" name="Nom" id="Nom" value="{{Nom}}">
+
+                <br>
+                <label for="Prenom">Prenom</label>
+                <input class="form-control" type="Text" name="Prenom" id="Prenom" value="{{Prenom}}">
+
+                <br>
+                <label for="Adresse">Adresse</label>
+                <input class="form-control" type="Text" name="Adresse" id="Adresse" value="{{Adresse}}">
+
+                <br>
+                <label for="Date_Naissance">Date naissance</label>
+                <input class="form-control" type="Text" name="Date_Naissance" id="Date_Naissance"
+                    value="{{Date_Naissance}}">
+            </fieldset>
+            <br>
+            <span id="phrase">Bonjour {{Nom}} {{Prenom}} vous avez {{Age}} ans et vous habitez à {{Adresse}} </span>
+
+            <br>
+            <br>
+
+            {{ form_start(form2) }}
+
+            {{ form_label(form2.Formation) }}
+            {{ form_widget(form2.Formation,  {
+                    'attr': {
+                        'class' : 'form-control',
+                        }}
+            )}}
+            {{ form_rest(form2) }}
+            <br>
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+
+            {{ form_end(form2) }}
+        </div>
+    </div>
+</div>
+<style>
+    img {
+        padding-top: 125px;
+    }
+</style>
+{% endblock %}
