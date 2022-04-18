@@ -51,8 +51,21 @@ class FormController extends AbstractController
         $age = round($days /365);
 
         if($request->isMethod('POST')){
-            $form2->handleRequest($request);
             
+            $form2->handleRequest($request);
+            $email = (new TemplatedEmail())
+                ->from('fima_tech@outlook.com')
+                ->to("nat.turlure@gmail.com")
+                ->subject('Contact')
+                ->htmlTemplate('emails/email.html.twig')
+                ->context([
+                    'Nom' => $_GET["Nom"],
+                    'Prenom' => $_GET["Prenom"],
+                    'Adresse' => $_GET["Adresse"],
+                    'Age' => $age,
+                    'Formation' => $form2->get('Formation')->getData(),
+                ]);
+            $mailer->send($email);
             return $this->redirectToRoute('app_form');
         }
         
