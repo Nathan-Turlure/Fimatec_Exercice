@@ -1,9 +1,6 @@
 # FimatechExercice
 
-Formulaire de contact.
-
-
-<h1> Installation </h1>
+<h2> Installation </h2>
 
 - Cloner le dépot:
 <pre>git clone https://github.com/Nathan-Turlure/Fimatech_Exercice.git</pre>
