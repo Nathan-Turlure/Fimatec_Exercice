@@ -55,7 +55,7 @@ class FormController extends AbstractController
             $form2->handleRequest($request);
             $email = (new TemplatedEmail())
                 ->from('fima_tech@outlook.com')
-                ->to("nat.turlure@gmail.com")
+                ->to($form2->get('Formation')->getData())
                 ->subject('Contact')
                 ->htmlTemplate('emails/email.html.twig')
                 ->context([
